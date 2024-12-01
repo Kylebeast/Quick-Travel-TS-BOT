@@ -7,7 +7,7 @@ This is a Python bot for TeamSpeak that automatically moves users between specif
 - `ts3` library (`pip install ts3`)
 
 ## Configuration
-Update the following in `quick_travel_bot.py`:
+Update the following in `tsquicktravel.py`:
 - `server_ip`: Your TeamSpeak server IP
 - `username`: Your server query login username
 - `password`: Your server query login password
@@ -15,4 +15,4 @@ Update the following in `quick_travel_bot.py`:
 
 ## How to Run
 ```bash
-python quick_travel_bot.py
+python tsquicktravel.py
