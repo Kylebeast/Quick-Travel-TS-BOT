@@ -6,7 +6,7 @@ import logging
 server_ip = ""  # Replace with your TeamSpeak server IP
 server_query_port = 10011  # Default TeamSpeak query port
 username = ""  # Your login name
-password = ""     # Your password
+password = ""  # Your password
 virtual_server_id = 1  # ID of the virtual server
 
 # Quick Travel Configurations (using Channel IDs)
@@ -36,6 +36,7 @@ def main():
                         if client_channel in quick_travel_map:
                             destination_channel = quick_travel_map[client_channel]
                             ts3conn.clientmove(cid=destination_channel, clid=client_id)
+                            ts3conn.clientpoke(clid=client_id, msg="You have been moved to another channel.")
                             logging.info("Moved client %s from channel %d to %d", client['client_nickname'], client_channel, destination_channel)
 
                 time.sleep(1)
